@@ -5343,14 +5343,14 @@
                             fill="currentColor">
                             <use xlink:href="#icon-h-dropdown-arrow"></use>
                         </svg></span></div><a target="_self" id="ba-tableMarkets"
-                    href="../wecoin/login" class="css-1ke7bwx">Spot</a>
-                <a target="_self" id="ba-tableMarkets" href="../wecoin/login"
+                    href="../login" class="css-1ke7bwx">Spot</a>
+                <a target="_self" id="ba-tableMarkets" href="../login"
                     class="css-1ke7bwx">Margin</a>
 
 
                 <div class="css-1h690ep"></div>
-                <div class="css-1h690ep"></div><a id="header_login" href="../wecoin/login/" class="css-1ke7bwx">Log
-                    In</a><a href="../wecoin/register/" class="css-1ke7bwx">Register</a>
+                <div class="css-1h690ep"></div><a id="header_login" href="../login/" class="css-1ke7bwx">Log
+                    In</a><a href="../register/" class="css-1ke7bwx">Register</a>
                 <div class="css-109r71v">
                     <div style="display:none">
                         <div class="css-yu8bgj">
@@ -5382,7 +5382,7 @@
                             </div>
                             <h2 data-bn-type="text" class="css-1gmkfzs">Join the world's largest crypto exchange</h2>
                             <div class="css-qelhuh"><button data-bn-type="button" aria-label="register"
-                                onclick="window.location.href='../wecoin/register';"       class=" css-o3h2xh">Register Now</button></div>
+                                onclick="window.location.href='../register';"       class=" css-o3h2xh">Register Now</button></div>
                         </div>
                     </div>
                 </div>
@@ -5477,8 +5477,8 @@
         <div class="css-12onrwt">
             <div data-bn-type="text" class="css-18f7v97">Start trading now</div>
             <div class="css-81xrsn"><a data-bn-type="button" aria-label="register"
-                    href="../wecoin/register" class=" css-ao077r">Register Now</a><a
-                    data-bn-type="button" aria-label="trade" href="../wecoin/login" class=" css-po5tlu">Trade Now</a>
+                    href="../register" class=" css-ao077r">Register Now</a><a
+                    data-bn-type="button" aria-label="trade" href="../login" class=" css-po5tlu">Trade Now</a>
             </div>
         </div>
     </div>

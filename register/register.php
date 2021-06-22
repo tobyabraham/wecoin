@@ -1544,7 +1544,7 @@ $lastlogin = date("Y-m-d h:i:sa");
     $demobal = 20000.00;
     
 
-$query="insert into `users`(`first name`,`last name`,`email`,`password`,`user id`, `main balance`,`spot balance`, `margin balance`,`last login`,`demo balance`,`demo spot`,`demo margin`) . VALUES('$fname','$lname','$email','$password','$userid','$mainb','$spotb','$marginb','$lastlogin','$demobal','$demospot','$demomargin')";
+$query="insert into `users`(`first name`,`last name`,`email`,`password`,`user id`, `main balance`,`spot balance`, `margin balance`,`last login`,`demo balance`,`demo spot`,`demo margin`)" . "VALUES('$fname','$lname','$email','$password','$userid','$mainb','$spotb','$marginb','$lastlogin','$demobal','$demospot','$demomargin')";
 mysqli_query($conn,$query) or die("Could Not Perform the Query");
 session_start();
 $_SESSION['user']= $email;

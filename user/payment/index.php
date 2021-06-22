@@ -8332,7 +8332,7 @@ position: relative;
 
         <div class="css-tq0shg">
             <header class="css-1rj0lsg">&nbsp;&nbsp;&nbsp;<a href="https://www.Wecoin Trade.com/en">
-                    <img src="/wecoin/logo.png">
+                    <img src="/logo.png">
                 </a>
 
                 <div class="css-1w2cmbz"><span class="hoverstatus css-1qqh4qo">&nbsp;&nbsp;&nbsp;&nbsp;Buy Crypto<div
@@ -8344,21 +8344,21 @@ position: relative;
                     href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Market</a>
                     <div class="dropdown"><a target="_self" id="ba-tableMarkets" href="https://www.Wecoin Trade.com/en/markets"
                         class="css-1ke7bwx">Live Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a href="/wecoin/user/margin/">Margin</a></div></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a href="/user/margin/">Margin</a></div></div>
     
                     <div class="dropdown"><a target="_self" id="ba-tableMarkets" href="https://www.Wecoin Trade.com/en/markets"
                         class="css-1ke7bwx">Demo Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a href="/wecoin/user/margin/">Margin</a></div></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a href="/user/margin/">Margin</a></div></div>
     
                     <div class="css-1h690ep"></div>
-                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../wecoin/login/" class="css-1ke7bwx">Wallet
-                    </a><div class="dropdown-content"><a href="/wecoin/user/wallet/spot/">Spot Balance</a><a href="/wecoin/user/wallet/margin/">Margin Balance</a></div></div>
-                    <div class="dropdown"><a href="../wecoin/register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/wecoin/user/spot#openorder">Spot Order</a>
-                        <a href="/wecoin/user/margin#openorder">Margin Order</a></div></div>
+                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../login/" class="css-1ke7bwx">Wallet
+                    </a><div class="dropdown-content"><a href="/user/wallet/spot/">Spot Balance</a><a href="/user/wallet/margin/">Margin Balance</a></div></div>
+                    <div class="dropdown"><a href="../register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/user/spot#openorder">Spot Order</a>
+                        <a href="/user/margin#openorder">Margin Order</a></div></div>
     
-                        <div class="dropdown"><a href="/wecoin/user/profile.html" class="css-1ke7bwx"><img src="/wecoin/profile.png" height="20"
-                            width="20" /></a><div class="dropdown-content"><a href="/wecoin/user/spot/">Dashboard</a>
-                                <a href="/wecoin/user/margin/">Fee Structure</a><a href="/wecoin/user/margin/">Logout</a></div></div>
+                        <div class="dropdown"><a href="/user/profile.html" class="css-1ke7bwx"><img src="/profile.png" height="20"
+                            width="20" /></a><div class="dropdown-content"><a href="/user/spot/">Dashboard</a>
+                                <a href="/user/margin/">Fee Structure</a><a href="/user/margin/">Logout</a></div></div>
                 <div class="css-109r71v">
                     <div style="display:none">
                         <div class="css-yu8bgj">
@@ -8384,7 +8384,7 @@ position: relative;
             <main class="css-1wr4jig">
                 <main class="css-xry4yv">
 
-                    <div class="css-3miali"><a data-bn-type="link" class="css-6ijtmk" href="/wecoin/user/">
+                    <div class="css-3miali"><a data-bn-type="link" class="css-6ijtmk" href="/user/">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path
@@ -8393,7 +8393,7 @@ position: relative;
                                 </svg>
                                 <div data-bn-type="text" class="css-iizq59">Dashboard</div>
                             </div>
-                        </a><a data-bn-type="link" href="/wecoin/user/payment" class="css-z87e9z">
+                        </a><a data-bn-type="link" href="/user/payment" class="css-z87e9z">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-14thuu2">
                                     <g clip-path="url(#sidebar-payment-s24_svg__clip0)" fill="currentColor">
@@ -8412,7 +8412,7 @@ position: relative;
                                 </svg>
                                 <div data-bn-type="text" class="css-1n0484q">Payment</div>
                             </div>
-                        </a><a data-bn-type="link" href="/wecoin/user/security" class="css-6ijtmk">
+                        </a><a data-bn-type="link" href="/user/security" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -8423,7 +8423,7 @@ position: relative;
                             </div>
                         </a>
 
-                        <a data-bn-type="link" href="/wecoin/user/settings" class="css-6ijtmk">
+                        <a data-bn-type="link" href="/user/settings" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path
@@ -8433,12 +8433,12 @@ position: relative;
                                 <div data-bn-type="text" class="css-1n0484q">Settings</div>
                             </div>
                         </a>
-  <a data-bn-type="link" href="/wecoin/user/tps" class="css-6ijtmk">
+  <a data-bn-type="link" href="/user/tps" class="css-6ijtmk">
                             <div class="css-10j588g"><img style="width:28px;height:28px; margin-left: 8px;" src="https://img.icons8.com/carbon-copy/100/000000/bot.png"/>
                                 <div data-bn-type="text" class="css-1n0484q">Third-Party Software</div>
                             </div>
                         </a>
-                        <a data-bn-type="link" href="/wecoin/user/referrals" rel="noopener noreferrer"
+                        <a data-bn-type="link" href="/user/referrals" rel="noopener noreferrer"
                             class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
@@ -8459,12 +8459,12 @@ position: relative;
                                 <div class="css-17utxv0">
                                     <div class="css-mca8vp">
                                         
-                                        <a href="/wecoin/user/payment"><div id="tab-crypto" class="css-ov54vn">
+                                        <a href="/user/payment"><div id="tab-crypto" class="css-ov54vn">
                                             <div class="css-1dywarg">
                                                 <div data-bn-type="text" class="css-1ms5o0x">Deposit</div>
                                             </div>
                                         </div></a>
-                                       <a href="/wecoin/user/payment/withdrawal"><div id="tab-withdraw" class="css-ov54vn">
+                                       <a href="/user/payment/withdrawal"><div id="tab-withdraw" class="css-ov54vn">
                                             <div class="css-oxzfpw">
                                                 <div data-bn-type="text" class="css-5slpb6">Withdraw</div>
                                             </div>

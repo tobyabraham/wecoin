@@ -8275,7 +8275,7 @@ padding-top: 15px;
 
         <div class="css-tq0shg">
             <header class="css-1rj0lsg">&nbsp;&nbsp;&nbsp;<a href="https://www.Wecoin Trade.com/en">
-                    <img src="/wecoin/logo.png">
+                    <img src="/logo.png">
                 </a>
 
                 <div class="css-1w2cmbz"><span class="hoverstatus css-1qqh4qo">&nbsp;&nbsp;&nbsp;&nbsp;Buy Crypto<div
@@ -8287,27 +8287,27 @@ padding-top: 15px;
                     href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Market</a>
                 <div class="dropdown"><a target="_self" id="ba-tableMarkets"
                         href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Live Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a
-                            href="/wecoin/user/margin/">Margin</a></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a
+                            href="/user/margin/">Margin</a></div>
                 </div>
 
                 <div class="dropdown"><a target="_self" id="ba-tableMarkets"
                         href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Demo Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a
-                            href="/wecoin/user/margin/">Margin</a></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a
+                            href="/user/margin/">Margin</a></div>
                 </div>
 
                 <div class="css-1h690ep"></div>
-                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../wecoin/login/" class="css-1ke7bwx">Wallet
-                    </a><div class="dropdown-content"><a href="/wecoin/user/wallet/spot/">Spot Balance</a><a href="/wecoin/user/wallet/margin/">Margin Balance</a></div></div>
-                    <div class="dropdown"><a href="../wecoin/register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/wecoin/user/spot#openorder">Spot Order</a>
-                        <a href="/wecoin/user/margin#openorder">Margin Order</a></div></div>
+                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../login/" class="css-1ke7bwx">Wallet
+                    </a><div class="dropdown-content"><a href="/user/wallet/spot/">Spot Balance</a><a href="/user/wallet/margin/">Margin Balance</a></div></div>
+                    <div class="dropdown"><a href="../register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/user/spot#openorder">Spot Order</a>
+                        <a href="/user/margin#openorder">Margin Order</a></div></div>
 
-                <div class="dropdown"><a href="/wecoin/user/profile.html" class="css-1ke7bwx"><img
-                            src="/wecoin/profile.png" height="20" width="20" /></a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Dashboard</a>
-                        <a href="/wecoin/user/margin/">Fee Structure</a><a
-                            href="/wecoin/user/margin/">Logout</a>
+                <div class="dropdown"><a href="/user/profile.html" class="css-1ke7bwx"><img
+                            src="/profile.png" height="20" width="20" /></a>
+                    <div class="dropdown-content"><a href="/user/spot/">Dashboard</a>
+                        <a href="/user/margin/">Fee Structure</a><a
+                            href="/user/margin/">Logout</a>
                     </div>
                 </div>
                 <div class="css-109r71v">
@@ -8335,7 +8335,7 @@ padding-top: 15px;
             <main class="css-1wr4jig">
                 <main class="css-xry4yv">
 
-                    <div class="css-3miali"><a data-bn-type="link" class="css-6ijtmk" href="/wecoin/user/">
+                    <div class="css-3miali"><a data-bn-type="link" class="css-6ijtmk" href="/user/">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path
@@ -8344,7 +8344,7 @@ padding-top: 15px;
                                 </svg>
                                 <div data-bn-type="text" class="css-iizq59">Dashboard</div>
                             </div>
-                        </a><a data-bn-type="link" href="/wecoin/user/payment" class="css-6ijtmk">
+                        </a><a data-bn-type="link" href="/user/payment" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <g clip-path="url(#sidebar-payment-s24_svg__clip0)" fill="currentColor">
@@ -8363,7 +8363,7 @@ padding-top: 15px;
                                 </svg>
                                 <div data-bn-type="text" class="css-1n0484q">Payment</div>
                             </div>
-                        </a><a data-bn-type="link" href="/wecoin/user/security" class="css-6ijtmk">
+                        </a><a data-bn-type="link" href="/user/security" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -8374,7 +8374,7 @@ padding-top: 15px;
                             </div>
                         </a>
 
-                        <a data-bn-type="link" href="/wecoin/user/settings" class="css-z87e9z">
+                        <a data-bn-type="link" href="/user/settings" class="css-z87e9z">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-14thuu2">
                                     <path
@@ -8384,12 +8384,12 @@ padding-top: 15px;
                                 <div data-bn-type="text" class="css-1n0484q">Settings</div>
                             </div>
                         </a>
-                        <a data-bn-type="link" href="/wecoin/user/tps" class="css-6ijtmk">
+                        <a data-bn-type="link" href="/user/tps" class="css-6ijtmk">
                             <div class="css-10j588g"><img style="width:28px;height:28px; margin-left: 8px;" src="https://img.icons8.com/carbon-copy/100/000000/bot.png"/>
                                 <div data-bn-type="text" class="css-1n0484q">Third-Party Software</div>
                             </div>
                         </a>
-                        <a data-bn-type="link" href="/wecoin/user/referrals" rel="noopener noreferrer"
+                        <a data-bn-type="link" href="/user/referrals" rel="noopener noreferrer"
                             class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
@@ -8607,7 +8607,7 @@ padding-top: 15px;
                             <div data-bn-type="text" class="css-1ofolr4">Support</div>
                             <div class="css-1pysja1"></div>
                             <div data-bn-type="text" class="css-1ofolr4">+</div>
-                        </div><a href="https://www.Wecoin Trade.com/wecoin/user/user-support/feedback/entry"
+                        </div><a href="https://www.Wecoin Trade.com/user/user-support/feedback/entry"
                             class="css-1myvhw3">
                             <div data-bn-type="text" class="css-1cjl26j">Give Us Feedback
                                 <!-- -->

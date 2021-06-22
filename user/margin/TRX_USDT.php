@@ -2,7 +2,7 @@
 session_start();
 $rows = 0;
 date_default_timezone_set('Africa/Lagos');
-$conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
+$conn=mysqli_connect('localhost','root','','wecoin') or die('Could not Connect My Sql:'.mysql_error());
 if(!isset($_SESSION["user"])){
     header("location: /login");  
 
@@ -10,7 +10,7 @@ if(!isset($_SESSION["user"])){
 if(isset($_SESSION["user"])){
     
     $email = $_SESSION['user'];
-    $conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
+    $conn=mysqli_connect('localhost','root','','wecoin') or die('Could not Connect My Sql:'.mysql_error());
     $ss = mysqli_query($conn,"select * from users where email='$email'");
     $row = mysqli_fetch_array($ss);
     $_SESSION['userid'] = $row['user id'];
@@ -72,14 +72,14 @@ if(isset($_SESSION["user"])){
         mysqli_query($conn,$queryopen) or die("Could Not Perform the Query");
        
     }
-    if(isset($_POST["totalsell"]) && isset($_POST["Leverages"])){
+    if(isset($_POST["totalsell"]) && isset($_POST["Leverage"])){
         if($_POST["totalsell"]>$_SESSION["marginbalance"]){
             echo '<script >alert("Insufficient Balance")</script>';
         }
         
         if($_POST["totalsell"]<$_SESSION["marginbalance"]){
             $_SESSION["marginbalance"] = $_SESSION["marginbalance"] - $_POST["totalsell"];
-            $leverage = $_POST["Leverages"];
+            $leverage = $_POST["Leverage"];
             $spotb = $_SESSION["marginbalance"];
             $transactionid = rand(1111111111,9999999999);
             $opendate = date("Y-M-d, h:i:sa");
@@ -88,7 +88,7 @@ if(isset($_SESSION["user"])){
             $pair = "TRX/USDT";
             $tradeprice = $_POST["totalsell"];
             $tradetype = "MARGIN(Sell)";
-            $result = $tradeprice*$_POST["Leverages"];
+            $result = $tradeprice*$_POST["Leverage"];
             $finresult = $result - $tradeprice;
             $profit = array();
             $loss = array();
@@ -147,13 +147,13 @@ if(isset($_SESSION["user"])){
     
 
     }
-    if(isset($_POST["buyprice"]) && isset($_POST["Leverage"])){
-        if($_POST["buyprice"]>$_SESSION["marginbalance"]){
+    if(isset($_POST["totalAmounts"]) && isset($_POST["Leverage"])){
+        if($_POST["totalAmounts"]>$_SESSION["marginbalance"]){
             echo '<script >alert("Insufficient Balance")</script>';
         }
         
-        if($_POST["buyprice"]<$_SESSION["marginbalance"]){
-            $_SESSION["marginbalance"] = $_SESSION["marginbalance"] - $_POST["buyprice"];
+        if($_POST["totalAmounts"]<$_SESSION["marginbalance"]){
+            $_SESSION["marginbalance"] = $_SESSION["marginbalance"] - $_POST["totalAmounts"];
             $spotb = $_SESSION["marginbalance"];
             $leverage = $_POST["Leverage"];
             $transactionid = rand(1111111111,9999999999);
@@ -161,7 +161,7 @@ if(isset($_SESSION["user"])){
             $opentime = date("h:i:sa");
             $opendays = date("d");
             $pair = "TRX/USDT";
-            $tradeprice = $_POST["buyprice"];
+            $tradeprice = $_POST["totalAmounts"];
             $tradetype = "MARGIN(Buy)";
             $result = $tradeprice*$_POST["Leverage"];
             $finresult = $result - $tradeprice;
@@ -600,24 +600,24 @@ if(isset($_SESSION["user"])){
 
 <body style="background: #14151a">
     <header>
-        <a href="" class="text-left"> <img src="/wecoin/logo.png"></a>
+        <a href="" class="text-left"> <img src="/logo.png"></a>
         <ul class="navigation">
             <li><a href="">Market</a></li>
             <div class="dropdown" style="display: inline-block;"> <li><a href="">Live Trade</a>
-                <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a href="/wecoin/user/margin/">Margin</a></div></li></div>
+                <div class="dropdown-content"><a href="/user/spot/">Spot</a><a href="/user/margin/">Margin</a></div></li></div>
                 <div class="dropdown">  <li><a href="" style="margin-right: 550px;"><span>Demo Trade</span></a>
-                <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a href="/wecoin/user/margin/">Margin</a></div></li></div>
+                <div class="dropdown-content"><a href="/user/spot/">Spot</a><a href="/user/margin/">Margin</a></div></li></div>
             <br />
             <br />
             <br />
             <div class="dropdown">  <li><a href="" ><span>Wallet</span></a>
-            <div class="dropdown-content"><a href="/wecoin/user/wallet/spot">Spot Balance</a><a href="/wecoin/user/wallet/margin/">Margin Balance</a></div></li></div>
+            <div class="dropdown-content"><a href="/user/wallet/spot">Spot Balance</a><a href="/user/wallet/margin/">Margin Balance</a></div></li></div>
 
 <div class="dropdown">  <li><a href="" style="margin-right: 10px;"><span>Order</span></a>
-    <div class="dropdown-content"><a href="/wecoin/user/spot#openorder">Spot Order</a><a href="/wecoin/user/margin#openorder">Margin Order</a></div></li></div>
-             <div class="dropdown"><a href="/wecoin/user/profile.html" class="css-1ke7bwx"><img src="/wecoin/profile.png" height="20"
-                width="20" /></a><div class="dropdown-content"><a href="/wecoin/user/">Dashboard</a>
-                    <a href="/wecoin/user/margin/">Fee Structure</a><a href="/wecoin/user/logout.php">Logout</a></div></div>
+    <div class="dropdown-content"><a href="/user/spot#openorder">Spot Order</a><a href="/user/margin#openorder">Margin Order</a></div></li></div>
+             <div class="dropdown"><a href="/user/profile.html" class="css-1ke7bwx"><img src="/profile.png" height="20"
+                width="20" /></a><div class="dropdown-content"><a href="/user/">Dashboard</a>
+                    <a href="/user/margin/">Fee Structure</a><a href="/user/logout.php">Logout</a></div></div>
         </ul>
 
 
@@ -800,19 +800,18 @@ if(isset($_SESSION["user"])){
                                   
                                   
                                        <br />
-                                       <div class="css-4cffwv">
-                                           <div class="css-454r4r">
+                                       
                                                <div class=" css-3ntzf7">
                                                    <div class="bn-input-prefix css-vurnku"><label data-bn-type="text"
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
                                                            class="css-ef8yc4">Size</label></div><input data-bn-type="input"
                                                            oninput="getBitPrice()"     id="buyamount" name="buyamount" class=" css-1wlt96c"
-                                                       type="number" min="0.001" step="0.001" value="" disabled>
+                                                       type="number" min="0.001" step="0.001" value="" required="required">
                                                    <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
-                                                           class="css-ef8yc4">BTC</label></div>
+                                                           class="css-ef8yc4">TRX</label></div>
                                                            
                                                </div>
                                                <div class=" css-3ntzf7">
@@ -832,15 +831,14 @@ if(isset($_SESSION["user"])){
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
                                                            class="css-ef8yc4">Cost</label></div><input data-bn-type="input"
-                                                      placeholder="Limit" max="20" id="totalAmount" name="totalAmount" class=" css-1wlt96c"
-                                                        type="number" value="" disabled>
+                                                       placeholder="Limit"  id="totalAmount" name="totalAmounts" class=" css-1wlt96c"
+                                                         type="number" step="0.01" value="" >
                                                    <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
                                                            class="css-ef8yc4">USDT</label></div>
                                                </div>
-                                           </div>
-                                       </div>
+                                         
                                    </div>
                                </div>
                                    <div  class="row" >
@@ -870,19 +868,19 @@ if(isset($_SESSION["user"])){
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
                                                            class="css-ef8yc4">Size</label></div><input data-bn-type="input"
-                                                      oninput="getBitP()" id="buyamounts" name="buyamount" class=" css-1wlt96c"
-                                                   value=""    type="number"  disabled>
+                                                      oninput="getBitPric()" id="buyamounts" name="buyamount" class=" css-1wlt96c"
+                                                   value=""    type="number"  >
                                                    <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
-                                                           class="css-ef8yc4">BTC</label></div>
+                                                           class="css-ef8yc4">TRX</label></div>
                                                </div>
                                                <div class=" css-3ntzf7">
                                                    <div class="bn-input-prefix css-vurnku"><label data-bn-type="text"
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
                                                            class="css-ef8yc4">Leverage</label></div><input data-bn-type="input"
-                                                      placeholder="Min Value:1 Max Value:20" max="20" id="FormRow-normal-quantity" name="Leverages" class=" css-1wlt96c"
+                                                      placeholder="Min Value:1 Max Value:20" max="20" id="FormRow-normal-quantity" name="Leverage" class=" css-1wlt96c"
                                                       required="required"    step="1" type="number" min="1"  value="Min Value:1 Max Value:20">
                                                    <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                            for="FormRow-normal-quantity"
@@ -894,8 +892,8 @@ if(isset($_SESSION["user"])){
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
                                                            class="css-ef8yc4">Cost</label></div><input data-bn-type="input"
-                                                 oninput="getBitP()" placeholder="Amount"  id="buybals" name="totalsell" class=" css-1wlt96c"
-                                                        type="number" value="" required="required" >
+                                                 oninput="getBitPric()" placeholder="Amount"  id="buybals" name="totalsell" class=" css-1wlt96c"
+                                                        type="number" value=""  disabled>
                                                    <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                            for="FormRow-normal-quantity"
                                                            style="display: inline-block; text-align: right;"
@@ -1185,28 +1183,7 @@ if(isset($_SESSION["user"])){
             ourRequests.send();
         }
 
-        curP();
-   function curP() {
-            var myRequest = new XMLHttpRequest();
-            myRequest.open('GET', 'https://api.binance.com/api/v3/ticker/24hr', true);
-            
-            
-            myRequest.onload = function () {
-                myData = JSON.parse(myRequest.responseText);
-                
-                document.getElementById("buybal").value = parseFloat(myData[353]["lastPrice"]).toFixed(5).toString();
-               
-            }
-            
-            myRequest.send();
-            
-        }
-        function sumPrice(){
-            document.getElementById("totalAmount").value = document.getElementById("buybal").value * document.getElementById("buyamount").value
-            document.getElementById("totAmount").value = document.getElementById("sellbal").value * document.getElementById("sellamount").value
-             
-        }
-sumPrice();
+     
         setInterval(orderBook, 5000);
 
         function orderBook() {
@@ -1254,38 +1231,56 @@ sumPrice();
 
         }
 
+        getBitPric();
+        function getBitPric(){
+            
+            
+            
+ 
+            var bitPric = new XMLHttpRequest();
+            bitPric.open("GET","https://bitpay.com/api/rates",true);
+            
+            bitPric.onload = function() {
+            var bitcoinData = JSON.parse(bitPric.responseText);
+            
+            document.getElementById("buybals").value = parseFloat(document.getElementById("buyamounts").value*(0.05)).toFixed(2);
+            }
+            bitPric.send();
+        }
         getBitPrice();
         function getBitPrice(){
             
             
-            document.getElementById("totalAmount").value = document.getElementById("buybal").value;
+            
  
             var bitPrice = new XMLHttpRequest();
             bitPrice.open("GET","https://bitpay.com/api/rates",true);
             
             bitPrice.onload = function() {
             var bitcoinData = JSON.parse(bitPrice.responseText);
-            var bitp = parseFloat(document.getElementById("buybal").value/0.07).toFixed(8);
-            document.getElementById("buyamount").value = bitp;
+            var bitp = parseFloat(document.getElementById("buyamount").value*(0.05)).toFixed(2);
+            document.getElementById("buybal").value = (0.05);
+            document.getElementById("totalAmount").value = bitp;
+            document.getElementById("buybals").value = parseFloat(document.getElementById("buyamounts").value*(0.05)).toFixed(2);
             }
             bitPrice.send();
         }
-       
-        getBitP();
-        function getBitP(){
+        getUsdPrice();
+        function getUsdPrice(){
             
-            
-           
             var bitPrices = new XMLHttpRequest();
             bitPrices.open("GET","https://bitpay.com/api/rates",true);
             
             bitPrices.onload = function() {
             var bitcoinData = JSON.parse(bitPrices.responseText);
-            var bitp = parseFloat(document.getElementById("buybals").value/0.07).toFixed(8);
-            document.getElementById("buyamounts").value = bitp;
+            var bitp = parseFloat(document.getElementById("sellamount").value*(0.05)).toFixed(2);
+           document.getElementById("sellbal").value = (0.05);
+            document.getElementById("totAmount").value = bitp;
+            
             }
             bitPrices.send();
         }
+     
 
     </script>
 <script>

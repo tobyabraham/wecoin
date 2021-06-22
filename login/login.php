@@ -6,7 +6,7 @@ if(empty($_POST['email'])) {
     
 }
 if(!empty($_POST['email'])) {
-    $conn=mysqli_connect('localhost','root','','wecoin') or die('Could not Connect My Sql:'.mysql_error());
+    $conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
     $rs=mysqli_query($conn,"select * from users WHERE email='$email' and password ='$password'");
    
    

@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['user'])){
-    header("location: /wecoin/login");  
+    header("location: /login");  
 }
 if(isset($_SESSION['user'])){
 ?>

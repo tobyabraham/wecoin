@@ -1,7 +1,7 @@
 <?php
 session_start();
 date_default_timezone_set('Africa/Lagos');
-$conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
+$conn=mysqli_connect('localhost','root','','wecoin') or die('Could not Connect My Sql:'.mysql_error());
 
 if(isset($_SESSION['user'])){
     if(isset($_POST['search'])){
@@ -100,7 +100,59 @@ if(isset($_SESSION['user'])){
             font-family: BinancePlex, Arial, sans-serif !important;
 
         }
+input {
+    border:none;
+    outline:none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position:relative;
+    z-index:0;
+    border-radius:10px;
+}
+input:before{
+    content:"";
+    background: linear-gradient(45deg,#ff0000,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,
+    #7a00ff,#ff00c8,#ff0000);
+    position:absolute;
+    top:-2px;
+    left:-2px;
+    z-index:-1;
+    filter: blur(5px);
+    width:calc(100% + 4px);
+    height:calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity:0;
+    transition:opacity .3s ease-in-out;
+    border-radius:10px;
 
+}
+input:active{
+    color:#000;
+}
+input:active:after{
+    background:transparent;
+}
+input:hover:before{
+    opacity:1;
+}
+input:after{
+    z-index: -1;
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+
+}
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
         .css-jlbk6n {
             box-sizing: border-box;
             margin: 0px;
@@ -8263,7 +8315,7 @@ padding-top: 15px;
 
         <div class="css-tq0shg">
             <header class="css-1rj0lsg">&nbsp;&nbsp;&nbsp;<a href="https://www.Wecoin Trade.com/en">
-                    <img src="/wecoin/logo.png">
+                    <img src="/logo.png">
                 </a>
 
                 <div class="css-1w2cmbz"><span class="hoverstatus css-1qqh4qo">&nbsp;&nbsp;&nbsp;&nbsp;Buy Crypto<div
@@ -8275,27 +8327,27 @@ padding-top: 15px;
                     href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Market</a>
                 <div class="dropdown"><a target="_self" id="ba-tableMarkets"
                         href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Live Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a
-                            href="/wecoin/user/margin/">Margin</a></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a
+                            href="/user/margin/">Margin</a></div>
                 </div>
 
                 <div class="dropdown"><a target="_self" id="ba-tableMarkets"
                         href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Demo Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a
-                            href="/wecoin/user/margin/">Margin</a></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a
+                            href="/user/margin/">Margin</a></div>
                 </div>
 
                 <div class="css-1h690ep"></div>
-                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../wecoin/login/" class="css-1ke7bwx">Wallet
-                    </a><div class="dropdown-content"><a href="/wecoin/user/wallet/spot/">Spot Balance</a><a href="/wecoin/user/wallet/margin/">Margin Balance</a></div></div>
-                    <div class="dropdown"><a href="../wecoin/register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/wecoin/user/spot#openorder">Spot Order</a>
-                        <a href="/wecoin/user/margin#openorder">Margin Order</a></div></div>
+                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../login/" class="css-1ke7bwx">Wallet
+                    </a><div class="dropdown-content"><a href="/user/wallet/spot/">Spot Balance</a><a href="/user/wallet/margin/">Margin Balance</a></div></div>
+                    <div class="dropdown"><a href="../register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/user/spot#openorder">Spot Order</a>
+                        <a href="/user/margin#openorder">Margin Order</a></div></div>
 
-                <div class="dropdown"><a href="/wecoin/user/profile.html" class="css-1ke7bwx"><img
-                            src="/wecoin/profile.png" height="20" width="20" /></a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Dashboard</a>
-                        <a href="/wecoin/user/margin/">Fee Structure</a><a
-                            href="/wecoin/user/margin/">Logout</a>
+                <div class="dropdown"><a href="/user/profile.html" class="css-1ke7bwx"><img
+                            src="/profile.png" height="20" width="20" /></a>
+                    <div class="dropdown-content"><a href="/user/spot/">Dashboard</a>
+                        <a href="/user/margin/">Fee Structure</a><a
+                            href="/user/margin/">Logout</a>
                     </div>
                 </div>
                 <div class="css-109r71v">
@@ -8323,7 +8375,7 @@ padding-top: 15px;
             <main class="css-1wr4jig">
                 <main class="css-xry4yv">
 
-                    <div class="css-3miali"><a  class="css-6ijtmk" href="/wecoin/user/">
+                    <div class="css-3miali"><a  class="css-6ijtmk" href="/user/">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path
@@ -8332,7 +8384,7 @@ padding-top: 15px;
                                 </svg>
                                 <div data-bn-type="text" class="css-iizq59">Dashboard</div>
                             </div>
-                        </a><a  href="/wecoin/user/payment" class="css-6ijtmk">
+                        </a><a  href="/user/payment" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <g clip-path="url(#sidebar-payment-s24_svg__clip0)" fill="currentColor">
@@ -8351,7 +8403,7 @@ padding-top: 15px;
                                 </svg>
                                 <div data-bn-type="text" class="css-1n0484q">Payment</div>
                             </div>
-                        </a><a  href="/wecoin/user/security" class="css-6ijtmk">
+                        </a><a  href="/user/security" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -8362,7 +8414,7 @@ padding-top: 15px;
                             </div>
                         </a>
 
-                        <a  href="/wecoin/user/settings" class="css-6ijtmk">
+                        <a  href="/user/settings" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path
@@ -8372,12 +8424,12 @@ padding-top: 15px;
                                 <div data-bn-type="text" class="css-1n0484q">Settings</div>
                             </div>
                         </a>
-                        <a  href="/wecoin/user/tps" class="css-z87e9z">
+                        <a  href="/user/tps" class="css-z87e9z">
                             <div class="css-10j588g"><img class="css-14thuu2" style="width:28px;height:28px; margin-left: 8px;" src="https://img.icons8.com/carbon-copy/100/000000/bot.png"/>
                                 <div data-bn-type="text" class="css-1n0484q">Third-Party Software</div>
                             </div>
                         </a>
-                        <a  href="/wecoin/user/referrals" rel="noopener noreferrer"
+                        <a  href="/user/referrals" rel="noopener noreferrer"
                             class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
@@ -8403,9 +8455,9 @@ padding-top: 15px;
                            
                             <form method="post" action ="">
                                 <div style="display:flex !important; ">
-                                <h4 style="margin-left:50px; margin-right: 500px;">Coinrule</h4>
-                                <input type="submit" name= "bothistory1" value="bothistory1">
-                                <input  type="submit" name= "tradebot1" value="tradebot1">
+                                <h4 style="margin-left:50px;">Coinrule</h4>
+                                <input class="glow" style="margin-left:300px;" type="submit" name= "bothistory1" value="Bot History1">
+                                <input class="glow" style="margin-left:10px; margin-right:10px;" type="submit" name= "tradebot1" value="Trade Bot1">
                                 <?php
                                 if(isset($_POST['bothistory1']) || isset($_POST['tradebot1'])){
                                 
@@ -8418,9 +8470,9 @@ padding-top: 15px;
                            
                                <form method="post" action ="">
                                 <div style="display:flex !important;">
-                                <h4 style="margin-left:50px; margin-right: 500px;">Cryptohopper</h4>
-                                <input type="submit" name= "bothistory2" value="bothistory2">
-                                <input type="submit" name= "tradebot2" value="tradebot2">
+                                <h4 style="margin-left:50px; ">Cryptohopper</h4>
+                                <input class="glow" style="margin-left:259px;" type="submit" name= "bothistory2" value="Bot History2">
+                                <input class="glow" style="margin-left:10px; margin-right:10px;" type="submit" name= "tradebot2" value="Trade Bot2">
                                 <?php
                                 if(isset($_POST['bothistory2']) || isset($_POST['tradebot2'])){
                                     echo '<form action="" method="post"><input name="search" placeholder="Enter License Key" required> 
@@ -8431,9 +8483,9 @@ padding-top: 15px;
                                </form>
                                <form method="post" action ="">
                                 <div style="display:flex !important;">
-                                <h4 style="margin-left:50px; margin-right: 500px;">Quadency</h4>
-                                <input type="submit" name= "bothistory3" value="bothistory3">
-                                <input type="submit" name= "tradebot3" value="tradebot3">
+                                <h4 style="margin-left:50px; ">Quadency</h4>
+                                <input class="glow" style="margin-left:286px;" type="submit" name= "bothistory3" value="Bot History3">
+                                <input class="glow" style="margin-left:10px; margin-right:10px;" type="submit" name= "tradebot3" value="Trade Bot3">
                                 <?php
                                 if(isset($_POST['bothistory3']) || isset($_POST['tradebot3'])){
                                     echo '<form method="post" action=""><input name="search" placeholder="Enter License Key" required>
@@ -8445,9 +8497,9 @@ padding-top: 15px;
                                </form>
                                <form method="post" action ="">
                                 <div style="display:flex !important;">
-                                <h4 style="margin-left:50px; margin-right: 500px;">3Commas</h4>
-                                <input type="submit" name= "bothistory4" value="bothistory4">
-                                <input type="submit" name= "tradebot4" value="tradebot4">
+                                <h4 style="margin-left:50px;">3Commas</h4>
+                                <input class="glow" style="margin-left:287px;" type="submit" name= "bothistory4" value="Bot History4">
+                                <input class="glow" style="margin-left:10px; margin-right:10px;" type="submit" name= "tradebot4" value="Trade Bot4">
                                 <?php
                                 
                                 if(isset($_POST['bothistory4']) || isset($_POST['tradebot4'])){
@@ -8460,9 +8512,9 @@ padding-top: 15px;
                                </form>
                                <form method="post" action ="">
                                 <div style="display:flex !important;">
-                                <h4 style="margin-left:50px; margin-right: 500px;">Bitsgap</h4>
-                                <input type="submit" name= "bothistory5" value="bothistory5">
-                                <input type="submit" name= "tradebot5" value="tradebot5">
+                                <h4 style="margin-left:50px;">Bitsgap</h4>
+                                <input class="glow" style="margin-left:309px;" type="submit" name= "bothistory5" value="Bot History5">
+                                <input class="glow" style="margin-left:10px; margin-right:10px;" type="submit" name= "tradebot5" value="Trade Bot5">
                                 <?php
                                 if(isset($_POST['bothistory5']) || isset($_POST['tradebot5'])){
                                     echo '<form method="post" action=""><input name="search" placeholder="Enter License Key" required>
@@ -8473,9 +8525,9 @@ padding-top: 15px;
                                </form>
                                <form method="post" action ="">
                                 <div style="display:flex !important;">
-                                <h4 style="margin-left:50px; margin-right: 500px;">Mudrex</h4>
-                                <input type="submit" name= "bothistory6" value="bothistory6">
-                                <input type="submit" name= "tradebot6" value="tradebot6">
+                                <h4 style="margin-left:50px;">Mudrex</h4>
+                                <input class="glow" style="margin-left:310px;" type="submit" name= "bothistory6" value="Bot History6">
+                                <input class="glow" style="margin-left:10px; margin-right:10px;" type="submit" name= "tradebot6" value="Trade Bot6">
                                 <?php
                                 if(isset($_POST['bothistory6']) || isset($_POST['tradebot6'])){
                                     echo '<form method="post" action=""><input name="search" placeholder="Enter License Key" required>
@@ -8486,9 +8538,9 @@ padding-top: 15px;
                                </form>
                                <form method="post" action ="">
                                 <div style="display:flex !important;">
-                                <h4 style="margin-left:50px; margin-right: 500px;">HodlBot</h4>
-                                <input type="submit" name= "bothistory7" value="bothistory7">
-                                <input type="submit" name= "tradebot7" value="tradebot7">
+                                <h4 style="margin-left:50px;">HodlBot</h4>
+                                <input class="glow" style="margin-left:306px;" type="submit" name= "bothistory7" value="Bot History7">
+                                <input class="glow" style="margin-left:10px; margin-right:10px;"  type="submit" name= "tradebot7" value="Trade Bot7">
                                 <?php
                                 if(isset($_POST['bothistory7']) || isset($_POST['tradebot7'])){
                                     echo '<form method="post" action=""><input name="search" placeholder="Enter License Key" required>
@@ -8615,7 +8667,7 @@ padding-top: 15px;
                             <div data-bn-type="text" class="css-1ofolr4">Support</div>
                             <div class="css-1pysja1"></div>
                             <div data-bn-type="text" class="css-1ofolr4">+</div>
-                        </div><a href="https://www.Wecoin Trade.com/wecoin/user/user-support/feedback/entry"
+                        </div><a href="https://www.Wecoin Trade.com/user/user-support/feedback/entry"
                             class="css-1myvhw3">
                             <div data-bn-type="text" class="css-1cjl26j">Give Us Feedback
                                 <!-- -->
@@ -8628,7 +8680,7 @@ padding-top: 15px;
                             <div data-bn-type="text" class="css-1cjl26j">Submit a request
                                 <!-- -->
                             </div>
-                        </a><a href="https://Wecoin Trade-docs.github.io/apidocs/spot/en/" class="css-1myvhw3">
+                        </a><a href="https:/ Trade-docs.github.io/apidocs/spot/en/" class="css-1myvhw3">
                             <div data-bn-type="text" class="css-1cjl26j">API Documentation
                                 <!-- -->
                             </div>
@@ -8745,19 +8797,19 @@ padding-top: 15px;
                                 class="css-wyeq5d"><svg xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw"
                                     fill="currentColor">
                                     <use xlink:href="#icon-h-telegram"></use>
-                                </svg></a><a href="https://www.facebook.com/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://www.facebook.comtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-facebook"></use>
-                                </svg></a><a href="https://twitter.com/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://twitter.comtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-twitter"></use>
-                                </svg></a><br /><a href="https://www.reddit.com/r/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><br /><a href="https://www.reddit.com/rtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-reddit"></use>
-                                </svg></a><a href="https://www.instagram.com/wecointrade/" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://www.instagram.comtrade/" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-instagram"></use>
-                                </svg></a><a href="https://www.youtube.com/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://www.youtube.comtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-youtube"></use>
                                 </svg></a></div>
@@ -8829,26 +8881,26 @@ padding-top: 15px;
                     <div class="css-136a9lx"><a href="https://www.Wecoin Trade.com/en/community" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-telegram"></use>
-                            </svg></a><a href="https://www.facebook.com/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.facebook.com Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-facebook"></use>
-                            </svg></a><a href="https://twitter.com/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://twitter.com Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-twitter"></use>
-                            </svg></a><a href="https://www.reddit.com/r/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.reddit.com/r Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-reddit"></use>
-                            </svg></a><a href="https://www.instagram.com/Wecoin Trade/" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.instagram.com Trade/" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-instagram"></use>
-                            </svg></a><a href="https://coinmarketcap.com/exchanges/Wecoin Trade/"
+                            </svg></a><a href="https://coinmarketcap.com/exchanges Trade/"
                             class="css-wyeq5d"><svg xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt"
                                 fill="currentColor">
                                 <use xlink:href="#icon-h-coinmarketcap"></use>
-                            </svg></a><a href="https://vk.com/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://vk.com Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-vk"></use>
-                            </svg></a><a href="https://www.youtube.com/Wecoin Tradeyoutube" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.youtube.com Tradeyoutube" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-youtube"></use>
                             </svg></a>

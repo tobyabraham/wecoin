@@ -3,7 +3,7 @@ session_start();
 $conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
 if(!isset($_SESSION["user"])){
     
-        header("location: /wecoin/login");  
+        header("location: /login");  
     
 
 }
@@ -17,7 +17,7 @@ if(isset($_SESSION["user"])){
     }
     
     $email = $_SESSION['user'];
-    $conn=mysqli_connect('localhost','root','','wecoin') or die('Could not Connect My Sql:'.mysql_error());
+    $conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
     $ss = mysqli_query($conn,"select * from users where email='$email'");
     $row = mysqli_fetch_array($ss);
     $_SESSION['userid'] = $row['user id'];

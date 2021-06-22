@@ -2,7 +2,7 @@
 session_start();
 $rows = 0;
 date_default_timezone_set('Africa/Lagos');
-$conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
+$conn=mysqli_connect('localhost','root','','wecoin') or die('Could not Connect My Sql:'.mysql_error());
 if(!isset($_SESSION["user"])){
     header("location: /login");  
 
@@ -10,7 +10,7 @@ if(!isset($_SESSION["user"])){
 if(isset($_SESSION["user"])){
     
     $email = $_SESSION['user'];
-    $conn=mysqli_connect('remotemysql.com','AI9hgEKDPt','nS6lsKdyHE','AI9hgEKDPt') or die('Could not Connect My Sql:'.mysql_error());
+    $conn=mysqli_connect('localhost','root','','wecoin') or die('Could not Connect My Sql:'.mysql_error());
     $ss = mysqli_query($conn,"select * from users where email='$email'");
     $row = mysqli_fetch_array($ss);
     $_SESSION['userid'] = $row['user id'];
@@ -138,20 +138,20 @@ if(isset($_SESSION["user"])){
     
 
     }
-    if(isset($_POST["buyprice"])){
-        if($_POST["buyprice"]>$_SESSION["spotbalance"]){
+    if(isset($_POST["totalbuy"])){
+        if($_POST["totalbuy"]>$_SESSION["spotbalance"]){
             echo '<script >alert("Insufficient Balance")</script>';
         }
         
-        if($_POST["buyprice"]<$_SESSION["spotbalance"]){
-            $_SESSION["spotbalance"] = $_SESSION["spotbalance"] - $_POST["buyprice"];
+        if($_POST["totalbuy"]<$_SESSION["spotbalance"]){
+            $_SESSION["spotbalance"] = $_SESSION["spotbalance"] - $_POST["totalbuy"];
             $spotb = $_SESSION["spotbalance"];
             $transactionid = rand(1111111111,9999999999);
             $opendate = date("Y-M-d, h:i:sa");
             $opentime = date("h:i:sa");
             $opendays = date("d");
             $pair = "ETH/USDT";
-            $tradeprice = $_POST["buyprice"];
+            $tradeprice = $_POST["totalbuy"];
             $tradetype = "SPOT(Buy)";
             $result = $tradeprice;
             $profit = array();
@@ -639,24 +639,24 @@ ul li a:hover{
 
 <body style="background: #14151a">
     <header>
-        <a href="" class="text-left"> <img src="/wecoin/logo.png"></a>
+        <a href="" class="text-left"> <img src="/logo.png"></a>
         <ul class="navigation">
             <li><a href="">Market</a></li>
             <div class="dropdown" style="display: inline-block;"> <li><a href="">Live Trade</a>
-                <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a href="/wecoin/user/margin/">Margin</a></div></li></div>
+                <div class="dropdown-content"><a href="/user/spot/">Spot</a><a href="/user/margin/">Margin</a></div></li></div>
                 <div class="dropdown">  <li><a href="" style="margin-right: 550px;"><span>Demo Trade</span></a>
-                <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a href="/wecoin/user/margin/">Margin</a></div></li></div>
+                <div class="dropdown-content"><a href="/user/spot/">Spot</a><a href="/user/margin/">Margin</a></div></li></div>
             <br />
             <br />
             <br />
             <div class="dropdown">  <li><a href="" ><span>Wallet</span></a>
-            <div class="dropdown-content"><a href="/wecoin/user/wallet/spot">Spot Balance</a><a href="/wecoin/user/wallet/margin/">Margin Balance</a></div></li></div>
+            <div class="dropdown-content"><a href="/user/wallet/spot">Spot Balance</a><a href="/user/wallet/margin/">Margin Balance</a></div></li></div>
 
 <div class="dropdown">  <li><a href="" style="margin-right: 10px;"><span>Order</span></a>
-    <div class="dropdown-content"><a href="/wecoin/user/spot#openorder">Spot Order</a><a href="/wecoin/user/margin#openorder">Margin Order</a></div></li></div>
-            <div class="dropdown"><a href="/wecoin/user/profile.html" class="css-1ke7bwx"><img src="/wecoin/profile.png" height="20"
-                width="20" /></a><div class="dropdown-content"><a href="/wecoin/user/">Dashboard</a>
-                    <a href="/wecoin/user/margin/">Fee Structure</a><a href="/wecoin/user/logout.php">Logout</a></div></div>
+    <div class="dropdown-content"><a href="/user/spot#openorder">Spot Order</a><a href="/user/margin#openorder">Margin Order</a></div></li></div>
+            <div class="dropdown"><a href="/user/profile.html" class="css-1ke7bwx"><img src="/profile.png" height="20"
+                width="20" /></a><div class="dropdown-content"><a href="/user/">Dashboard</a>
+                    <a href="/user/margin/">Fee Structure</a><a href="/user/logout.php">Logout</a></div></div>
         </ul>
 
 
@@ -846,7 +846,7 @@ ul li a:hover{
                                                             for="FormRow-BUY-price" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">Price</label></div><input data-bn-type="input"
                                                         id="buybal" name="buyprice" class=" css-1wlt96c" type="number"
-                                                      oninput="getBitPrice()" required="required" min="0.01" step="0.01"  value="" lang="en"required="required">
+                                                      oninput="getBitPrice()"  min="0.01" step="0.01"  value="" lang="en" required="required">
                                                     <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                             for="FormRow-BUY-price" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">USDT</label></div>
@@ -857,8 +857,8 @@ ul li a:hover{
                                                     <div class="bn-input-prefix css-vurnku"><label data-bn-type="text"
                                                             for="FormRow-BUY-quantity" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">Amount</label></div><input data-bn-type="input" 
-                                                         value=""  oninput="getBitPrice()" id="buyamount" name="bitcoinval" class=" css-1wlt96c" type="number"
-                                                         lang="en" disabled>
+                                                         value=""  oninput="getBitPrice()" id="buyamount" name="bitcoinval" class=" css-1wlt96c" type="text"
+                                                         lang="en" >
                                                     <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                             for="FormRow-BUY-quantity" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">ETH</label></div>
@@ -904,7 +904,7 @@ ul li a:hover{
                                                             for="FormRow-BUY-price" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">Price</label></div><input data-bn-type="input"
                                                        id="sellbal" name="sellprice" class="css-1wlt96c" type="number"
-                                                        min="0.01" step="0.01" value="" lang="en" disabled>
+                                                        min="0.01" step="0.01" value="" lang="en" required="required" >
                                                     <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                             for="FormRow-BUY-price" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">USDT</label></div>
@@ -916,7 +916,7 @@ ul li a:hover{
                                                             for="FormRow-BUY-quantity" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">Amount</label></div><input data-bn-type="input"
                                                             oninput="getUsdPrice()"  id="sellamount" name="quantity" class=" css-1wlt96c" type="text"
-                                                        pattern="^[0-9][\.\d]*(,\d+)?$"  value="" lang="en" required="required">
+                                                          value="" lang="en" required="required">
                                                     <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                             for="FormRow-BUY-quantity" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">ETH</label></div>
@@ -943,7 +943,7 @@ ul li a:hover{
                                                             for="FormRow-BUY-total" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">Total</label></div><input data-bn-type="input"
                                                         id="totAmount" name="totalsell" class=" css-1wlt96c" type="number"
-                                                        min="0.01" step="0.01" value="" lang="en" >
+                                                        min="0.01" step="0.01" value="" lang="en" disabled>
                                                     <div class="bn-input-suffix css-vurnku"><label data-bn-type="text"
                                                             for="FormRow-BUY-total" style="display: inline-block; text-align: right;"
                                                             class="css-ef8yc4">USDT</label></div>
@@ -1281,52 +1281,36 @@ height: 350px;"></div>
         function getBitPrice(){
             
             
-            document.getElementById("totalAmount").value = document.getElementById("buybal").value;
+            
  
             var bitPrice = new XMLHttpRequest();
             bitPrice.open("GET","https://bitpay.com/api/rates",true);
             
             bitPrice.onload = function() {
             var bitcoinData = JSON.parse(bitPrice.responseText);
-            var bitp = parseFloat(document.getElementById("buybal").value/(bitcoinData[2]["rate"]/bitcoinData[13]["rate"])).toFixed(8);
-            document.getElementById("buyamount").value = bitp;
+            var bitp = parseFloat(document.getElementById("buyamount").value*(bitcoinData[2]["rate"]/bitcoinData[13]["rate"])).toFixed(2);
+            document.getElementById("buybal").value = parseFloat(bitcoinData[2]["rate"]/bitcoinData[13]["rate"]).toFixed(2);
+            document.getElementById("totalAmount").value = bitp;
+            
             }
             bitPrice.send();
         }
         getUsdPrice();
         function getUsdPrice(){
             
-            
-            
- 
             var bitPrices = new XMLHttpRequest();
             bitPrices.open("GET","https://bitpay.com/api/rates",true);
             
             bitPrices.onload = function() {
             var bitcoinData = JSON.parse(bitPrices.responseText);
             var bitp = parseFloat(document.getElementById("sellamount").value*(bitcoinData[2]["rate"]/bitcoinData[13]["rate"])).toFixed(2);
-            document.getElementById("sellbal").value = bitp;
-            document.getElementById("totAmount").value = document.getElementById("sellbal").value;
+           document.getElementById("sellbal").value = parseFloat(bitcoinData[2]["rate"]/bitcoinData[13]["rate"]).toFixed(2);
+            document.getElementById("totAmount").value = bitp;
+            
             }
             bitPrices.send();
         }
-        curP();
-   function curP() {
-            var myRequest = new XMLHttpRequest();
-            myRequest.open('GET', 'https://api.binance.com/api/v3/ticker/24hr', true);
-            
-            
-            myRequest.onload = function () {
-                myData = JSON.parse(myRequest.responseText);
-                
-                document.getElementById("buybal").value = parseFloat(myData[12]["lastPrice"]).toFixed(2).toString();
-                document.getElementById("sellbal").value = parseFloat(myData[12]["lastPrice"]).toFixed(2).toString();
-             
-            }
-            
-            myRequest.send();
-            
-        }
+     
         
         setInterval(marketTrade, 5000);
         function marketTrade() {

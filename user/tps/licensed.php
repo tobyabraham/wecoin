@@ -8500,7 +8500,7 @@ padding-top: 15px;
 
         <div class="css-tq0shg">
             <header class="css-1rj0lsg">&nbsp;&nbsp;&nbsp;<a href="https://www.Wecoin Trade.com/en">
-                    <img src="/wecoin/logo.png">
+                    <img src="/logo.png">
                 </a>
 
                 <div class="css-1w2cmbz"><span class="hoverstatus css-1qqh4qo">&nbsp;&nbsp;&nbsp;&nbsp;Buy Crypto<div
@@ -8512,27 +8512,27 @@ padding-top: 15px;
                     href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Market</a>
                 <div class="dropdown"><a target="_self" id="ba-tableMarkets"
                         href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Live Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a
-                            href="/wecoin/user/margin/">Margin</a></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a
+                            href="/user/margin/">Margin</a></div>
                 </div>
 
                 <div class="dropdown"><a target="_self" id="ba-tableMarkets"
                         href="https://www.Wecoin Trade.com/en/markets" class="css-1ke7bwx">Demo Trade</a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Spot</a><a
-                            href="/wecoin/user/margin/">Margin</a></div>
+                    <div class="dropdown-content"><a href="/user/spot/">Spot</a><a
+                            href="/user/margin/">Margin</a></div>
                 </div>
 
                 <div class="css-1h690ep"></div>
-                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../wecoin/login/" class="css-1ke7bwx">Wallet
-                    </a><div class="dropdown-content"><a href="/wecoin/user/wallet/spot/">Spot Balance</a><a href="/wecoin/user/wallet/margin/">Margin Balance</a></div></div>
-                    <div class="dropdown"><a href="../wecoin/register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/wecoin/user/spot#openorder">Spot Order</a>
-                        <a href="/wecoin/user/margin#openorder">Margin Order</a></div></div>
+                    <div class="css-1h690ep"></div><div class="dropdown"><a id="header_login" href="../login/" class="css-1ke7bwx">Wallet
+                    </a><div class="dropdown-content"><a href="/user/wallet/spot/">Spot Balance</a><a href="/user/wallet/margin/">Margin Balance</a></div></div>
+                    <div class="dropdown"><a href="../register/" class="css-1ke7bwx">Orders</a><div class="dropdown-content"><a href="/user/spot#openorder">Spot Order</a>
+                        <a href="/user/margin#openorder">Margin Order</a></div></div>
 
-                <div class="dropdown"><a href="/wecoin/user/profile.html" class="css-1ke7bwx"><img
-                            src="/wecoin/profile.png" height="20" width="20" /></a>
-                    <div class="dropdown-content"><a href="/wecoin/user/spot/">Dashboard</a>
-                        <a href="/wecoin/user/margin/">Fee Structure</a><a
-                            href="/wecoin/user/margin/">Logout</a>
+                <div class="dropdown"><a href="/user/profile.html" class="css-1ke7bwx"><img
+                            src="/profile.png" height="20" width="20" /></a>
+                    <div class="dropdown-content"><a href="/user/spot/">Dashboard</a>
+                        <a href="/user/margin/">Fee Structure</a><a
+                            href="/user/margin/">Logout</a>
                     </div>
                 </div>
                 <div class="css-109r71v">
@@ -8560,7 +8560,7 @@ padding-top: 15px;
             <main class="css-1wr4jig">
                 <main class="css-xry4yv">
 
-                    <div class="css-3miali"><a  class="css-6ijtmk" href="/wecoin/user/">
+                    <div class="css-3miali"><a  class="css-6ijtmk" href="/user/">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path
@@ -8569,7 +8569,7 @@ padding-top: 15px;
                                 </svg>
                                 <div data-bn-type="text" class="css-iizq59">Dashboard</div>
                             </div>
-                        </a><a  href="/wecoin/user/payment" class="css-6ijtmk">
+                        </a><a  href="/user/payment" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <g clip-path="url(#sidebar-payment-s24_svg__clip0)" fill="currentColor">
@@ -8588,7 +8588,7 @@ padding-top: 15px;
                                 </svg>
                                 <div data-bn-type="text" class="css-1n0484q">Payment</div>
                             </div>
-                        </a><a  href="/wecoin/user/security" class="css-6ijtmk">
+                        </a><a  href="/user/security" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -8599,7 +8599,7 @@ padding-top: 15px;
                             </div>
                         </a>
 
-                        <a  href="/wecoin/user/settings" class="css-6ijtmk">
+                        <a  href="/user/settings" class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
                                     <path
@@ -8609,12 +8609,12 @@ padding-top: 15px;
                                 <div data-bn-type="text" class="css-1n0484q">Settings</div>
                             </div>
                         </a>
-                        <a  href="/wecoin/user/tps" class="css-z87e9z">
+                        <a  href="/user/tps" class="css-z87e9z">
                             <div class="css-10j588g"><img class="css-14thuu2" style="width:28px;height:28px; margin-left: 8px;" src="https://img.icons8.com/carbon-copy/100/000000/bot.png"/>
                                 <div data-bn-type="text" class="css-1n0484q">Third-Party Software</div>
                             </div>
                         </a>
-                        <a  href="/wecoin/user/referrals" rel="noopener noreferrer"
+                        <a  href="/user/referrals" rel="noopener noreferrer"
                             class="css-6ijtmk">
                             <div class="css-10j588g"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     fill="none" class="css-hd27fe">
@@ -8907,7 +8907,7 @@ padding-top: 15px;
                             <div data-bn-type="text" class="css-1ofolr4">Support</div>
                             <div class="css-1pysja1"></div>
                             <div data-bn-type="text" class="css-1ofolr4">+</div>
-                        </div><a href="https://www.Wecoin Trade.com/wecoin/user/user-support/feedback/entry"
+                        </div><a href="https://www.Wecoin Trade.com/user/user-support/feedback/entry"
                             class="css-1myvhw3">
                             <div data-bn-type="text" class="css-1cjl26j">Give Us Feedback
                                 <!-- -->
@@ -8920,7 +8920,7 @@ padding-top: 15px;
                             <div data-bn-type="text" class="css-1cjl26j">Submit a request
                                 <!-- -->
                             </div>
-                        </a><a href="https://Wecoin Trade-docs.github.io/apidocs/spot/en/" class="css-1myvhw3">
+                        </a><a href="https:/ Trade-docs.github.io/apidocs/spot/en/" class="css-1myvhw3">
                             <div data-bn-type="text" class="css-1cjl26j">API Documentation
                                 <!-- -->
                             </div>
@@ -9037,19 +9037,19 @@ padding-top: 15px;
                                 class="css-wyeq5d"><svg xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw"
                                     fill="currentColor">
                                     <use xlink:href="#icon-h-telegram"></use>
-                                </svg></a><a href="https://www.facebook.com/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://www.facebook.comtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-facebook"></use>
-                                </svg></a><a href="https://twitter.com/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://twitter.comtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-twitter"></use>
-                                </svg></a><br /><a href="https://www.reddit.com/r/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><br /><a href="https://www.reddit.com/rtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-reddit"></use>
-                                </svg></a><a href="https://www.instagram.com/wecointrade/" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://www.instagram.comtrade/" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-instagram"></use>
-                                </svg></a><a href="https://www.youtube.com/wecointrade" class="css-wyeq5d"><svg
+                                </svg></a><a href="https://www.youtube.comtrade" class="css-wyeq5d"><svg
                                     xmlns="http://www.w3.org/2000/svg" class="css-1ok5vaw" fill="currentColor">
                                     <use xlink:href="#icon-h-youtube"></use>
                                 </svg></a></div>
@@ -9121,26 +9121,26 @@ padding-top: 15px;
                     <div class="css-136a9lx"><a href="https://www.Wecoin Trade.com/en/community" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-telegram"></use>
-                            </svg></a><a href="https://www.facebook.com/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.facebook.com Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-facebook"></use>
-                            </svg></a><a href="https://twitter.com/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://twitter.com Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-twitter"></use>
-                            </svg></a><a href="https://www.reddit.com/r/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.reddit.com/r Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-reddit"></use>
-                            </svg></a><a href="https://www.instagram.com/Wecoin Trade/" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.instagram.com Trade/" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-instagram"></use>
-                            </svg></a><a href="https://coinmarketcap.com/exchanges/Wecoin Trade/"
+                            </svg></a><a href="https://coinmarketcap.com/exchanges Trade/"
                             class="css-wyeq5d"><svg xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt"
                                 fill="currentColor">
                                 <use xlink:href="#icon-h-coinmarketcap"></use>
-                            </svg></a><a href="https://vk.com/Wecoin Trade" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://vk.com Trade" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-vk"></use>
-                            </svg></a><a href="https://www.youtube.com/Wecoin Tradeyoutube" class="css-wyeq5d"><svg
+                            </svg></a><a href="https://www.youtube.com Tradeyoutube" class="css-wyeq5d"><svg
                                 xmlns="http://www.w3.org/2000/svg" class="css-1c0vxpt" fill="currentColor">
                                 <use xlink:href="#icon-h-youtube"></use>
                             </svg></a>

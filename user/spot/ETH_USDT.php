@@ -27,9 +27,9 @@ if(isset($_SESSION["user"])){
     $fname = $fname[0];
     $_SESSION['lastlogin'] = $row['last login'];
     
-    if(isset($_POST["options"])){
+     if(isset($_POST["options"])){
         $nrows = $_POST["options"] - 1;
-        $rs=mysqli_query($conn, "SELECT * FROM `openorder` LIMIT $nrows,1");
+        $rs=mysqli_query($conn, "SELECT * FROM `openorder` WHERE `Trade Type` LIKE '%SPOT%'  LIMIT $nrows,1");
         $rowa = mysqli_fetch_array($rs);
         $openday = $rowa['Day'];
         $result = $rowa['Amount'];
@@ -49,9 +49,9 @@ if(isset($_SESSION["user"])){
                 $loss[] = rand(-50,-25)/10;
                 }
                 $profitloss = array_merge($profit,$loss);
-            shuffle($profitloss);
-        $numofdays = $openday - date("d");
-        for ($z = 0; $z < ($numofdays + 1); $z++) {
+          shuffle($profitloss);
+        $numofdays = date("d") - $openday;
+        for ($z = 0; $z < ($numofdays+1); $z++) {
            $result = $result + ($result*($profitloss[$z]/100));
             
         }

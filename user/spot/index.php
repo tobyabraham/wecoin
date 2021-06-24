@@ -27,7 +27,7 @@ if(isset($_SESSION["user"])){
     $fname = $fname[0];
     $_SESSION['lastlogin'] = $row['last login'];
     
-   if(isset($_POST["options"])){
+    if(isset($_POST["options"])){
         $nrows = $_POST["options"] - 1;
         $rs=mysqli_query($conn, "SELECT * FROM `openorder` WHERE `Trade Type` LIKE '%SPOT%'  LIMIT $nrows,1");
         $rowa = mysqli_fetch_array($rs);

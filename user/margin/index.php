@@ -54,7 +54,7 @@ if(isset($_SESSION["user"])){
                 }
                 $profitloss = array_merge($profit,$loss);
             shuffle($profitloss);
-        $numofdays = $openday - date("d");
+        $numofdays = date("d") - $openday;
         for ($z = 0; $z < ($numofdays + 1); $z++) {
             $levresult = $levresult + ($levresult*($profitloss[$z]/100));
             

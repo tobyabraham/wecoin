@@ -1071,7 +1071,7 @@ if(isset($_SESSION["user"])){
            
  
        } */
-        setInterval(priceTicker, 5000);
+        setInterval(priceTicker, 6000);
         function priceTicker() {
             var myRequest = new XMLHttpRequest();
             myRequest.open('GET', 'https://api.binance.com/api/v3/ticker/24hr', true);
@@ -1138,7 +1138,7 @@ if(isset($_SESSION["user"])){
             myRequest.send();
         }
 
-        setInterval(marketTrade, 5000);
+        setInterval(marketTrade, 6000);
         function marketTrade() {
             var ourRequests = new XMLHttpRequest();
             ourRequests.open('GET', 'https://api.binance.com/api/v1/trades?symbol=XRPUSDT&limit=100', true);
@@ -1184,7 +1184,7 @@ if(isset($_SESSION["user"])){
         }
 
       
-        setInterval(orderBook, 5000);
+        setInterval(orderBook, 6000);
 
         function orderBook() {
             var ourRequest = new XMLHttpRequest();
